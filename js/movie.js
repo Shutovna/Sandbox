@@ -25,7 +25,7 @@ function rememberMoviesReating() {
         let success;
 
         do {
-            name = prompt('Один из последних просмотренных фильмов?');
+            name = prompt('Один из последних просмотренных фильмов?').trim;
             success = name != null && name != '' && name.length < 50;
         } while (!success);
 
@@ -64,7 +64,7 @@ function writeYourGenres() {
         let success;
 
         do {
-            personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером ${i + 1}`);
+            personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером ${i + 1}`).trim();
             success = personalMovieDB.genres[i] != null && personalMovieDB.genres[i] != '';
         } while (!success);        
     }
