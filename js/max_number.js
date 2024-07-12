@@ -1,5 +1,5 @@
 function findMaxNumber(a, b, c, d) {
-    if (arguments.length != 4) {
+    if (arguments.length !== 4) {
         return 0;
     }
 
