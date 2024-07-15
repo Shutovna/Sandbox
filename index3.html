@@ -5,22 +5,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Document</title>
 	<style>
-		body {
-			height: 1000px;
+		.content-box {
+			background-color: white;
+			border: black 1px solid;
+			width: 300px;
+			height: 300px;
 		}
-		.box {
-			width: 150px;
-			height: 100px;
-			background-color: red;
+
+		.moving-box {
+			background-color: black;
+			width: 30px;
+			height: 30px;
+			position: relative;
+
 		}
 	</style>
 </head>
 <body>
-	
+<script defer src="js/interval.js"></script>
+<script defer src="js/animation.js"></script>
 	<div class="box">
-		Touch me!
+		<button id="start">Start</button>
+		<button id="stop">Stop</button>
 	</div>
 
-	<script src="js/mobile_events.js"></script>
+<button id="start-animation">Start animation</button>
+<div class="content-box">
+	<div class="moving-box">
+
+	</div>
+</div>
+
 </body>
 </html>
