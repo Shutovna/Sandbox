@@ -1,5 +1,3 @@
-"use strict"
-
 function Person(id, name, email) {
     this.id = id;
     this.name = name;
@@ -19,3 +17,10 @@ console.log(p2)
 
 p1.save()
 p2.save()
+
+function Test() {
+    this.first = function() {
+        alert("first")
+    }
+}
+

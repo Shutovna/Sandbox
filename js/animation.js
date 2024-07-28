@@ -1,30 +1,20 @@
 const movingBox = document.querySelector(".moving-box");
+let pos = 0;
 
-function startAnimation() {
-    let pos = 0;
-    let timer2Id = 0;
-    movingBox.style.top = "0px";
-    movingBox.style.left = "0px";
 
-    setTimeout(move, 100);
+function boxAnimation() {
+    pos++;
+    movingBox.style.top = pos + "px";
+    movingBox.style.left = pos + "px";
 
-    function move() {
-        if (pos === 280) {
-            clearInterval(timer2Id)
-        } else {
-            movingBox.style.top = pos + "px";
-            movingBox.style.left = pos + "px";
-            pos += 10;
-            timer2Id = setTimeout(function () {
-                move();
-            }, 10)
-        }
-
+    if (pos < 270) {
+        requestAnimationFrame(boxAnimation)
     }
 
 }
 
 let startAnimationBtn = document.querySelector("#start-animation");
-startAnimationBtn.addEventListener("click", ()=> {
-    startAnimation();
+startAnimationBtn.addEventListener("click", () => {
+    pos=0;
+    requestAnimationFrame(boxAnimation);
 });
